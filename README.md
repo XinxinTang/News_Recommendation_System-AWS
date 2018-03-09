@@ -16,7 +16,7 @@ Please connect to AWS
 You can run python code file 'monitor.py, fetcher.py, deduper.py' seperately, or
 run 'news_pipeline_launcher.sh' file to start them all.
 
-3. Run 'service.py, recommendation_service.py, server.py, click_log_processor.py' to start all services <br>
+>3. Run 'service.py, recommendation_service.py, server.py, click_log_processor.py' to start all services <br>
 
 4. Go to webserver/server 'npm install'  'npm start' to start server <br>
 
