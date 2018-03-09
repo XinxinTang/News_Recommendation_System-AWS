@@ -1,0 +1,4 @@
+{
+  "mongoDbUri": "mongodb://ec2-52-205-251-116.compute-1.amazonaws.com:33333/RecommendationNews",
+  "jwtSecret": "a secret phrase!!"
+}
