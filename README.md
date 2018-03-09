@@ -14,9 +14,10 @@ Please connect to AWS
 >./mongod <br>
 2. Start data generator <br>
 You can run the following python code file seperately, or run 'news_pipeline_launcher.sh' file to start them all <br>
->*monitor.py, fetcher.py, deduper.py*
+> monitor.py, fetcher.py, deduper.py
 
-3. Run service.py, recommendation_service.py, server.py, click_log_processor.py to start all services <br>
+3. Run the following python code files to start all services <br>
+>service.py, recommendation_service.py, server.py, click_log_processor.py
 
 4. Go to webserver/server 'npm install'  'npm start' to start server <br>
 
