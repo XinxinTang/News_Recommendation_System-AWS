@@ -1,5 +1,4 @@
 # News_Recommend_System
-=
 AWS, MongoDB, Kafka, RPC, Redis
 
 
@@ -12,12 +11,12 @@ Please install Big data tools: MongoDB, Kafka, Redis <br>
 Please connect to AWS
 
 1. Run MongoDB locally <br>
-'''./mongod''' <br>
+>./mongod <br>
 2. Start data generator <br>
-You can run python code file 'monitor.py, fetcher.py, deduper.py' seperately, or
-run 'news_pipeline_launcher.sh' file to start them all.
+You can run the following python code file seperately, or run 'news_pipeline_launcher.sh' file to start them all <br>
+>*monitor.py, fetcher.py, deduper.py*
 
->3. Run 'service.py, recommendation_service.py, server.py, click_log_processor.py' to start all services <br>
+3. Run service.py, recommendation_service.py, server.py, click_log_processor.py to start all services <br>
 
 4. Go to webserver/server 'npm install'  'npm start' to start server <br>
 
