@@ -4,7 +4,7 @@ AWS, MongoDB, Kafka, RPC, Redis
 
 System diagram:
 
-![shiyanlou logo](https://github.com/XinxinTang/News_Recommendation_System-AWS/blob/master/Images/News-kafka.png)
+![news](https://github.com/XinxinTang/News_Recommendation_System-AWS/blob/master/Images/Screen%20Shot%202018-04-05%20at%203.10.50%20PM.png)
 
 ## Get started <br>
 Please install Big data tools: MongoDB, Kafka, Redis <br>
