@@ -9,7 +9,7 @@ AWS, MongoDB, Kafka, RPC, Redis
 1. The system monitored news source. Once fresh news published, system scraped the body text and computed similarity between fresh news and news stored in MongoDB using algorithm TF-IDF. After that, System stored distinct news in MongoDB. <br>
 2. Here we built a CNN model for classification. We took some data from MongoDB as training set to train CNN model. 
 3. Made a classification for all pieces of news using trained CNN model
-4. Recommended some news which has same category with the news user clicked. 
+4. Recommended some news which has same category with the news user clicked. <br>
 This is the whole recommendation system! 
 
 ## Get started <br>
