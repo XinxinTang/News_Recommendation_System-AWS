@@ -1,5 +1,5 @@
 # News_Recommend_System
-AWS, MongoDB, Kafka, RPC, Redis
+**Key words:** AWS, MongoDB, Kafka, RPC, Redis, Real-time Recommendation System
 
 **System diagram**
 
