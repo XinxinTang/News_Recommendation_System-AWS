@@ -1,10 +1,16 @@
 # News_Recommend_System
 AWS, MongoDB, Kafka, RPC, Redis
 
-
-System diagram:
+**System diagram**
 
 ![news](https://github.com/XinxinTang/News_Recommendation_System-AWS/blob/master/Images/Screen%20Shot%202018-04-05%20at%203.10.50%20PM.png)
+
+**Program Description** <br>
+1. The system monitored news source. Once fresh news published, system scraped the body text and computed similarity between fresh news and news stored in MongoDB using algorithm TF-IDF. After that, System stored distinct news in MongoDB. <br>
+2. Here we built a CNN model for classification. We took some data from MongoDB as training set to train CNN model. 
+3. Made a classification for all pieces of news using trained CNN model
+4. Recommended some news which has same category with the news user clicked. 
+This is the whole recommendation system! 
 
 ## Get started <br>
 Please install Big data tools: MongoDB, Kafka, Redis <br>
