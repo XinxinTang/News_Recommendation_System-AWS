@@ -6,6 +6,22 @@
 ![news](https://github.com/XinxinTang/News_Recommendation_System-AWS/blob/master/Images/Screen%20Shot%202018-04-05%20at%203.10.50%20PM.png)
 
 **Program Description** <br>
+There are two main components in this project: Data collection and storage and Full-stack recommendation service.
+
+1. Data collection and storage  
+1) The system monitored news source based on News APIs. Once latest news published, monitor will check repeatness based on encoded title-**Digest**. Then this system sent a list of key/value pair to Kafka Broker  
+```
+Kafka Queue Keyset: Source, Author, Title(md5), url, urlToImage, PublishedAt, Digest
+```  
+2) The system fetch news content based on url and NewsPaper API. Add content in message array.
+```
+Kafka Queue Keyset: Source, Author, Title(md5), url, urlToImage, PublishedAt, Digest, Text
+```  
+3) The system eliminated repeated news based on TF-IDF algorithm, and add class for each news based on Deep Learning CNN model. Storing these news into MongoDB eventually. 
+```
+Kafka Queue Keyset: Source, Author, Title(md5), url, urlToImage, PublishedAt, Digest, Text, Class
+```
+
 1. The system monitored news source. Once fresh news published, system scraped the body text and computed similarity between fresh news and news stored in MongoDB using algorithm TF-IDF. After that, System stored distinct news in MongoDB. <br>
 2. Here we built a CNN model for classification. We took some data from MongoDB as training set to train CNN model. 
 3. Made a classification for all pieces of news using trained CNN model
