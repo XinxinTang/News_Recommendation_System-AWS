@@ -28,7 +28,7 @@ To classify automatically, we executed first two steps to collect a lot of news.
 
 
 ### 2. Full-Stack recommendation service
-![Imgur](https://i.imgur.com/NbZo112.png)
+![Imgur](https://i.imgur.com/H1WJs1a.png)
 2.1 Collected User's click event includes UserID, NewsID and timestamp.  
 2.2 Updated **User Preference Model** of each class based on Time Decay method:
 ```
