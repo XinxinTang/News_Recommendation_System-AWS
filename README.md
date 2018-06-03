@@ -28,9 +28,12 @@ To classify automatically, we executed first two steps to collect a lot of news.
 
 
 ### 2. Full-Stack recommendation service
-!  
+![Imgur](https://i.imgur.com/NbZo112.png)
 2.1 Collected User's click event includes UserID, NewsID and timestamp.  
-2.2 Updated **User Preference Model** of each class based on Time Decay method:{Clicked: (1-alpha)*old_p + alpha; non-clicked: (1-alpha)*old_p}  
+2.2 Updated **User Preference Model** of each class based on Time Decay method:
+```
+{Clicked: (1-alpha)*old_p + alpha; non-clicked: (1-alpha)*old_p}  
+```  
 2.3 Sent the target class news from MongoDB to Front-end Website for viewing based on **User Preference Class**  
 
 
