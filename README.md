@@ -1,34 +1,40 @@
 # News_Recommend_System
 **Key words:** AWS, MongoDB, Kafka, RPC, Redis, Real-time Recommendation System
 
-**System diagram**
+## System Diagram
 
 ![news](https://github.com/XinxinTang/News_Recommendation_System-AWS/blob/master/Images/Screen%20Shot%202018-04-05%20at%203.10.50%20PM.png)
 
-**Program Description** <br>
+## Program Description  
 There are two main components in this project: Data collection and storage and Full-stack recommendation service.
 
-1. Data collection and storage  
-1) The system monitored news source based on News APIs. Once latest news published, monitor will check repeatness based on encoded title-**Digest**. Then this system sent a list of key/value pair to Kafka Broker  
+### 1. Data collection and storage  
+![Imgur](https://i.imgur.com/gMWeFPA.png)
+1.1 Monitored news source based on News APIs. Once latest news published, monitor will check repeatness based on encoded title-**Digest**. Then this system sent a list of key/value pair to Kafka Broker  
 ```
 Kafka Queue Keyset: Source, Author, Title(md5), url, urlToImage, PublishedAt, Digest
 ```  
-2) The system fetch news content based on url and NewsPaper API. Add content in message array.
+1.2 Fetched news content based on url and NewsPaper API. Add content in message array.
 ```
 Kafka Queue Keyset: Source, Author, Title(md5), url, urlToImage, PublishedAt, Digest, Text
 ```  
-3) The system eliminated repeated news based on TF-IDF algorithm, and add class for each news based on Deep Learning CNN model. Storing these news into MongoDB eventually. 
+1.3 Eliminated repeated news based on TF-IDF algorithm, and add class for each news based on Deep Learning CNN model. Storing these news into MongoDB eventually. 
 ```
 Kafka Queue Keyset: Source, Author, Title(md5), url, urlToImage, PublishedAt, Digest, Text, Class
-```
+MongoDB: Source, Author, Title(md5), url, urlToImage, PublishedAt, Digest, Text, Class
+```  
+**Notes:**
+To classify automatically, we executed first two steps to collect a lot of news. Extracting news title and manual class label as Deep Learning training set. 
 
-1. The system monitored news source. Once fresh news published, system scraped the body text and computed similarity between fresh news and news stored in MongoDB using algorithm TF-IDF. After that, System stored distinct news in MongoDB. <br>
-2. Here we built a CNN model for classification. We took some data from MongoDB as training set to train CNN model. 
-3. Made a classification for all pieces of news using trained CNN model
-4. Recommended some news which has same category with the news user clicked. <br>
-This is the whole recommendation system! 
 
-## Get started <br>
+### 2. Full-Stack recommendation service
+!
+2.1 Collected User's click event includes UserID, NewsID and timestamp. 
+2.2 Updated **User Preference Model** of each class based on Time Decay method:{Clicked: (1-alpha)*old_p + alpha; non-clicked: (1-alpha)*old_p}
+2.3 Sent the target class news from MongoDB to Front-end Website for viewing based on **User Preference Class**
+
+
+## Get started  
 Please install Big data tools: MongoDB, Kafka, Redis <br>
 Please connect to AWS
 
