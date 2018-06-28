@@ -3,6 +3,7 @@
 
 ## System Diagram
 
+
 ![news](https://github.com/XinxinTang/News_Recommendation_System-AWS/blob/master/Images/Screen%20Shot%202018-04-05%20at%203.10.50%20PM.png)
 
 ## Program Description  
