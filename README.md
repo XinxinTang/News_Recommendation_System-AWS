@@ -55,4 +55,4 @@ You can run the following python code file seperately, or run 'news_pipeline_lau
 
 5. Go to webserver/client 'npm run build' to create build folder then 'npm start'. It will be jumped to the login page immediately, sign up first and log in. Congrats! We are done so far! <br>
 
-
+6. go to login page
